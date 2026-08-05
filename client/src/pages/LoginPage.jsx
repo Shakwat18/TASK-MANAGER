@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import HeaderForR_L from "../layouts/HeaderForR&L";
 import "./login.css";
-import { useNavigate } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 export default function LoginPage() {
   const [user, setUser]=useState({
   email:'',
@@ -28,6 +28,12 @@ if(res.ok){
   navigate('/')
 }
   }
+
+  const handleClick=()=>{
+    navigate('/resetPassword',{
+      state:user.email
+    })
+  }
   return (
     <HeaderForR_L>
       <div className="main_login">
@@ -41,6 +47,9 @@ if(res.ok){
           <button className="btn btn-primary" type="submit">
             Submit
           </button>
+                  <NavLink className='a ' onClick={handleClick}>Forget Password</NavLink>
+                  <NavLink to='/register' className='a'>I don't have an account</NavLink>
+
         </form>
       </div>
     </HeaderForR_L>

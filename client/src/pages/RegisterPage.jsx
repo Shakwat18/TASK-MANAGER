@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import HeaderForR_L from '../layouts/HeaderForR&L'
-import { useNavigate } from 'react-router'
+import { NavLink, useNavigate } from 'react-router'
 
 export default function RegisterPage() {
   const navigate= useNavigate()
@@ -27,7 +27,9 @@ const hangleSubmit=async(e)=>{
 
   const data = await response.json();
  if(response.ok){
-navigate('/login')
+navigate('/otp',{
+  state:user.email
+})
  }
 };
 
@@ -46,6 +48,7 @@ navigate('/login')
         <input type="password" className="form-control" name='password'  onChange={handleChange}/>
 
         <button className="btn btn-primary " type='submit'>Submit</button>
+        <NavLink to='/login' className='a'>I have an account</NavLink>
       </form>
     </div>
     </HeaderForR_L>

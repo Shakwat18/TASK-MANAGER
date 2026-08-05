@@ -20,8 +20,8 @@ router.post('/login',limiter, userLogin)
 router.get('/profile', auth, profileDetails)
 // router.get('/profile', passport.authenticate('jwt', { session: false }), profileDetails)
 router.put('/profileUpdate', auth, profileUpdate)
-router.get('/emailverify/:email', auth, recoverVerifyEmail)
-router.post('/otpverify/:otp/:email', auth, recoverVerifyOpt)
-router.post('/resetpassword', auth, resetPassword)
+router.get('/emailverify/:email', recoverVerifyEmail)
+router.post('/otpverify/:otp/:email', recoverVerifyOpt)
+router.post('/resetpassword', resetPassword)
 
 module.exports = router

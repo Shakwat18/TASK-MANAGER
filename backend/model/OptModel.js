@@ -9,7 +9,7 @@ const optSchema=new mongoose.Schema({
     },
    expAt:{
     type: Date,
-    default:  new Date(Date.now() + 2 * 60 * 1000)
+    default: ()=> new Date(Date.now() + 2 * 60 * 1000)
    }
 },{timestamps:true, versionKey:false})
 

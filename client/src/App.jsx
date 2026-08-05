@@ -10,6 +10,8 @@ import StatusPage from './pages/StatusPage';
 import HeaderForR_L from './layouts/HeaderForR&L';
 import NotFoundPage from './pages/NotFoundPage';
 import ProtectedRoutes from './components/ProtectedRoutes';
+import OtpPage from './pages/OtpPage';
+import ResetPassword from './pages/ResetPassword';
 export default function App() {
   return (
     <BrowserRouter>
@@ -23,6 +25,8 @@ export default function App() {
       </Route>
       <Route path='/login' element={<LoginPage/>}/>
       <Route path='/register' element={<RegisterPage/>} exact/>
+      <Route path='/otp' element={<OtpPage/>} exact/>
+      <Route path='/resetPassword' element={<ResetPassword/>} exact/>
       <Route path='*' element={<NotFoundPage/>}/>
     </Routes>
     </BrowserRouter>

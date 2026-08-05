@@ -25,3 +25,7 @@ form button{
 label{
     font: 1em sans-serif;
 }
+
+.a{
+  align-self: center;
+}
