@@ -42,6 +42,9 @@ const userLogin = async (req, res) => {
         }
     ])
 
+    console.log(result, resut);
+    
+
     if (resut[0].count == 0) {
         res.status(401).json({
             message: 'Invalid credentials'

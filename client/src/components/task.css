@@ -1,0 +1,11 @@
+.card{
+    height: 160px;
+    width: 150px;
+    padding: 5px;
+    gap: 4px;
+    margin: 10px;
+}
+
+.card h4{
+font-size: 1.3rem;
+}

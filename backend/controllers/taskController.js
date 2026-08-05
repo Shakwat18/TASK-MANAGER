@@ -53,6 +53,8 @@ res.status(200).json({
 
 const deleteTask=async(req, res)=>{
    let  {id}= req.params
+   console.log(id);
+   
    const find= await Task.findOne({_id:id})
    if(!find) {
     return res.status(404).json({

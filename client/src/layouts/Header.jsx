@@ -1,7 +1,8 @@
 import React from 'react'
-import {  NavLink} from 'react-router'
+import {  NavLink, useNavigate} from 'react-router'
 import './Header.css'
 export default function Header(props) {
+  const navigate= useNavigate()
   return (
  <div className='head'>
    <nav className='nav'>
@@ -17,9 +18,9 @@ export default function Header(props) {
     </NavLink>   
    </div>
  <div className="profile">
-< NavLink className='NavLink'to='/logout'>
-     Logout
-    </NavLink>
+<button className='btn text-white' onClick={()=>{localStorage.removeItem('token')
+  navigate('/login')
+}}>Logout</button>
  </div>
    </nav>
    {props.children}

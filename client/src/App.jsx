@@ -1,6 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter, Route, Routes} from 'react-router'
+import {BrowserRouter, Route, RouterContextProvider, Routes} from 'react-router'
 import Header from './layouts/Header';
 import DashBoard from './pages/DashBoard';
 import CreateNewTask from './pages/CreateNewTask';
@@ -9,17 +9,20 @@ import RegisterPage from './pages/RegisterPage';
 import StatusPage from './pages/StatusPage';
 import HeaderForR_L from './layouts/HeaderForR&L';
 import NotFoundPage from './pages/NotFoundPage';
+import ProtectedRoutes from './components/ProtectedRoutes';
 export default function App() {
   return (
     <BrowserRouter>
       {/* <HeaderForR_L/> */}
 
     <Routes>
-      <Route path='/' element={<DashBoard/>}/>
-      <Route path='/addnew' element={<CreateNewTask/>}/>
+      <Route element={<ProtectedRoutes/>}>
+      <Route path='/' element={<DashBoard/>} exact/>
+      <Route path='/addnew' element={<CreateNewTask/>} exact/>
+      <Route path='/status' element={<StatusPage/>} exact/>
+      </Route>
       <Route path='/login' element={<LoginPage/>}/>
-      <Route path='/register' element={<RegisterPage/>}/>
-      <Route path='/status' element={<StatusPage/>}/>
+      <Route path='/register' element={<RegisterPage/>} exact/>
       <Route path='*' element={<NotFoundPage/>}/>
     </Routes>
     </BrowserRouter>

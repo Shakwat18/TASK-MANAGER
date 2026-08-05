@@ -3,7 +3,7 @@ import "./Headerrl.css";
 import { NavLink } from "react-router";
 export default function HeaderForR_L(props) {
   return (
-    <div className=".rlnavdiv">
+    <div className="rlnavdiv">
       <nav className="rlnav">
         <div className="logo"><span>Task Manager</span></div>
      <div className="r_l">

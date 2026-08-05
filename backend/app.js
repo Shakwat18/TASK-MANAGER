@@ -7,7 +7,7 @@ const router = require('./router/userRouter')
 const cookieParser = require('cookie-parser')
 const passport = require('passport')
 const Taskrouter = require('./router/taskRouter')
-
+const cors = require('cors')
 
 const app= express()
 
@@ -17,6 +17,7 @@ app.use(helmet())
 app.use(xss())
 
 //
+app.use(cors())
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
