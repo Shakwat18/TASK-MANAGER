@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.head{
+    display: flex;
+}
+.nav{
+    display: flex;
+flex-direction: column;
+justify-content: space-between;
+text-align: left;
+padding: 20px;
+    background-color: rgb(9, 9, 61);
+height: 100dvh;
+width: 200px;
+}
+
+.mainNav{
+     display: flex;
+flex-direction: column;
+justify-content:center;
+
+    gap: 50px;
+}
+
+.NavLink{
+text-decoration: none;
+color: rgb(221, 221, 221);
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: bold;
+font-size: 1.5rem;
+
+}
+
+.profile .NavLink{
+    font-size: 0.8rem;
+    
+}

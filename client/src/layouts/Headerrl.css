@@ -1,0 +1,31 @@
+.rlnav{
+    display: flex;
+width: 100%;
+background-color:rgb(9, 9, 61);
+justify-content: space-between;
+padding:0px 50px 0px 50px;
+height: 50px;
+align-items: center;
+
+}
+
+.rlNavLink{
+    text-decoration: none;
+    font-size: 1rem;
+    color: azure;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.logo{
+    color: aquamarine;
+    font-family: monospace;
+    font-size: 1.8rem;
+    cursor: pointer;
+} 
+
+.r_l{
+    display: flex;
+gap: 20px;
+}
